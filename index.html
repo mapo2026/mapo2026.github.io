@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polheim Systems | Fahrzeugeinrichtungen & Dachträger</title>
+    <style>
+        :root {
+            --primary: #0a2540; /* Modernes Dunkelblau */
+            --accent: #ff6b00;  /* Signal-Orange für Akzente */
+            --light: #f4f6f8;   /* Heller Hintergrund */
+            --text: #333333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text); line-height: 1.6; }
+        header { background: var(--primary); color: white; padding: 20px; sticky; top: 0; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: bold; font-size: 24px; color: white; text-decoration: none; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        nav a:hover { color: var(--accent); }
+        .hero { background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('https://unsplash.com') center/cover; color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 42px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; max-width: 800px; margin: 0 auto 30px; }
+        .btn { background: var(--accent); color: white; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; transition: background 0.3s; }
+        .btn:hover { background: #e05e00; }
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--primary); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--light); padding: 30px; border-radius: 6px; border-top: 4px solid var(--primary); }
+        .card h3 { margin-bottom: 15px; color: var(--primary); }
+        .card ul { list-style-type: none; }
+        .card ul li { margin-bottom: 8px; padding-left: 15px; position: relative; }
+        .card ul li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
+        .contact-box { background: var(--primary); color: white; padding: 40px; border-radius: 6px; max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: none; border-radius: 4px; }
+        footer { background: #051422; color: #999; text-align: center; padding: 30px 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">POLHEIM SYSTEMS</a>
+        <nav>
+            <a href="#produkte">Produkte</a>
+            <a href="#ablauf">Ablauf</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Ihr Nutzfahrzeug, perfekt eingerichtet.</h1>
+        <p>Professionelle Fahrzeugeinrichtungen aus Aluminium. Maßgeschneidert für Handwerk und Gewerbe. Geringes Gewicht, hohe Robustheit, maximale Sicherheit.</p>
+        <a href="#kontakt" class="btn">Jetzt Beratung anfragen</a>
+    </section>
+
+    <section class="container" id="produkte">
+        <h2 class="section-title">Unsere Produktbereiche</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Fahrzeugeinrichtungen</h3>
+                <p>Maßgeschneiderte Regale, Schubladen und Koffersysteme aus leichtem Aluminium für jedes Gewerk.</p>
+            </div>
+            <div class="card">
+                <h3>Dachträgersysteme</h3>
+                <p>Aerodynamisch und hochbelastbar. Perfekt abgestimmt für den sicheren Transport auf dem Fahrzeugdach:</p>
+                <ul>
+                    <li>Dachträger Q01 (Basis)</li>
+                    <li>Klappbar Dachträger Q07</li>
+                    <li>Dachgalerie Q13 & Q19</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Boden & Verkleidung</h3>
+                <p>Passgenaue, strapazierfähige Bodenplatten und kratzfeste Seitenwandverkleidungen schützen Ihren Laderaum dauerhaft.</p>
+            </div>
+            <div class="card">
+                <h3>Ladungssicherung</h3>
+                <p>Profi-Zubehör nach gesetzlicher Norm: Zurrschienen, Klemmstangen, Fittinge, Gurte und Netze.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="kontakt">
+        <h2 class="section-title">Unverbindliche Offerte anfragen</h2>
+        <div class="contact-box">
+            <form action="mailto:info@polheim-systems.de" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Fahrzeugmodell & Gewerk *</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>E-Mail-Adresse *</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Ihre Nachricht</label>
+                    <textarea rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Anfrage senden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Polheim Systems. Alle Rechte vorbehalten. | info@polheim-systems.de</p>
+    </footer>
+
+</body>
+</html>
