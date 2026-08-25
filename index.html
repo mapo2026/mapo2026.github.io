@@ -81,39 +81,45 @@
         </div>
     </section>
 
-<section class="container" id="kontakt">
-    <h2 class="section-title">Unverbindliche Offerte anfragen</h2>
-    <div class="contact-box">
-        <!-- FormSubmit verarbeitet die Daten im Hintergrund und sendet sie an Ihre E-Mail -->
+<section id="kontakt" class="container">
+    <h2 class="section-title">Anfrage senden</h2>
+    <div style="max-width: 600px; margin: 0 auto; background: var(--light); padding: 30px; border-radius: 6px;">
+        
+        <!-- Das Formular sendet die Daten direkt an Ihre E-Mail -->
         <form action="https://formsubmit.co" method="POST">
             
-            <!-- Verhindert Spam-Bots durch ein unsichtbares Feld -->
+            <!-- Honeypot Spam-Schutz (Unsichtbar für Menschen, fängt Bots ab) -->
             <input type="text" name="_honey" style="display:none">
             
-            <!-- Schaltet die Captcha-Abfrage aus, falls Sie direktes Absenden wünschen -->
-            <input type="hidden" name="_captcha" value="false">
+            <!-- Verhindert die standardmäßige FormSubmit-Bestätigungsseite -->
+            <input type="hidden" name="_next" value="https://polheim-systems.de">
             
-            <!-- Bestimmt die Betreffzeile der E-Mail, die Sie erhalten -->
-            <input type="hidden" name="_subject" value="Neue Offertenanfrage - Polheim Systems">
+            <!-- Setzt einen sauberen E-Mail-Betreff für Ihren Posteingang -->
+            <input type="hidden" name="_subject" value="Neue Offerten-Anfrage von Polheim-Systems.de">
 
-            <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="Name" required>
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Name / Firma *</label>
+                <input type="text" name="Name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
             </div>
-            <div class="form-group">
-                <label for="modell">Fahrzeugmodell & Gewerk *</label>
-                <input type="text" id="modell" name="Fahrzeug_und_Gewerk" required>
+
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">E-Mail-Adresse *</label>
+                <input type="email" name="Email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
             </div>
-            <div class="form-group">
-                <label for="email">E-Mail-Adresse *</label>
-                <input type="email" id="email" name="Email" required>
+
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Telefonnummer</label>
+                <input type="tel" name="Telefon" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
             </div>
-            <div class="form-group">
-                <label for="nachricht">Ihre Nachricht</label>
-                <textarea id="nachricht" name="Nachricht" rows="4"></textarea>
+
+            <div style="margin-bottom: 25px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Ihre Anfrage (Fahrzeugtyp, gewünschte Einrichtung) *</label>
+                <textarea name="Anfrage" required rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit;"></textarea>
             </div>
-            <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Anfrage senden</button>
+
+            <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Anfrage jetzt absenden</button>
         </form>
+
     </div>
 </section>
 
