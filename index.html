@@ -81,30 +81,42 @@
         </div>
     </section>
 
-    <section class="container" id="kontakt">
-        <h2 class="section-title">Unverbindliche Offerte anfragen</h2>
-        <div class="contact-box">
-            <form action="mailto:info@polheim-systems.de" method="POST" enctype="text/plain">
-                <div class="form-group">
-                    <label>Name *</label>
-                    <input type="text" required>
-                </div>
-                <div class="form-group">
-                    <label>Fahrzeugmodell & Gewerk *</label>
-                    <input type="text" required>
-                </div>
-                <div class="form-group">
-                    <label>E-Mail-Adresse *</label>
-                    <input type="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Ihre Nachricht</label>
-                    <textarea rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Anfrage senden</button>
-            </form>
-        </div>
-    </section>
+<section class="container" id="kontakt">
+    <h2 class="section-title">Unverbindliche Offerte anfragen</h2>
+    <div class="contact-box">
+        <!-- FormSubmit verarbeitet die Daten im Hintergrund und sendet sie an Ihre E-Mail -->
+        <form action="https://formsubmit.co" method="POST">
+            
+            <!-- Verhindert Spam-Bots durch ein unsichtbares Feld -->
+            <input type="text" name="_honey" style="display:none">
+            
+            <!-- Schaltet die Captcha-Abfrage aus, falls Sie direktes Absenden wünschen -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Bestimmt die Betreffzeile der E-Mail, die Sie erhalten -->
+            <input type="hidden" name="_subject" value="Neue Offertenanfrage - Polheim Systems">
+
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="modell">Fahrzeugmodell & Gewerk *</label>
+                <input type="text" id="modell" name="Fahrzeug_und_Gewerk" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail-Adresse *</label>
+                <input type="email" id="email" name="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="nachricht">Ihre Nachricht</label>
+                <textarea id="nachricht" name="Nachricht" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Anfrage senden</button>
+        </form>
+    </div>
+</section>
+
 
     <footer>
         <p>&copy; 2026 Polheim Systems. Alle Rechte vorbehalten. | info@polheim-systems.de</p>
