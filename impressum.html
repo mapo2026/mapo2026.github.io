@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polheim Systems | Fahrzeugeinrichtungen & Dachträger</title>
+    <style>
+        :root {
+            --primary: #0a2540; /* Modernes Dunkelblau */
+            --accent: #ff6b00;  /* Signal-Orange für Akzente */
+            --light: #f4f6f8;   /* Heller Hintergrund */
+            --text: #333333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text); line-height: 1.6; }
+        header { background: var(--primary); color: white; padding: 20px; sticky; top: 0; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: bold; font-size: 24px; color: white; text-decoration: none; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        nav a:hover { color: var(--accent); }
+        .hero { background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('https://unsplash.com') center/cover; color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 42px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; max-width: 800px; margin: 0 auto 30px; }
+        .btn { background: var(--accent); color: white; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; transition: background 0.3s; }
+        .btn:hover { background: #e05e00; }
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--primary); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--light); padding: 30px; border-radius: 6px; border-top: 4px solid var(--primary); }
+        .card h3 { margin-bottom: 15px; color: var(--primary); }
+        .card ul { list-style-type: none; }
+        .card ul li { margin-bottom: 8px; padding-left: 15px; position: relative; }
+        .card ul li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
+        .contact-box { background: var(--primary); color: white; padding: 40px; border-radius: 6px; max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: none; border-radius: 4px; }
+        footer { background: #051422; color: #999; text-align: center; padding: 30px 20px; font-size: 14px; }
+    
+
+header {
+    display: flex;
+    justify-content: space-between; /* Schiebt Logo-Einheit nach links und Nav nach rechts */
+    align-items: center;
+    background-color: #051d3b; /* Dunkelblau aus Ihrem Design */
+    height: 80px; 
+    padding: 0 40px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Abstand zwischen dem Bild-Logo und dem Text "POLHEIM SYSTEMS" */
+    text-decoration: none; /* Entfernt den Unterstrich beim Text */
+    height: 100%;
+}
+
+.logo-img {
+    max-height: 70%; /* Passt die Bildgröße perfekt an die Zeilenhöhe an */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 22px;
+    white-space: nowrap; /* Verhindert einen ungewollten Zeilenumbruch beim Namen */
+}
+
+/* Styling für die Navigation auf der rechten Seite */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Kleiner visueller Effekt beim Drüberfahren */
+}
+
+
+</style>
+</head>
+
+<body style="background-color: #051d3b; margin: 0; padding: 0; font-family: sans-serif; color: #ffffff;">
+
+    <!-- HEADER / KOPFZEILE (Dunkelblau) -->
+    <header style="display: flex; justify-content: space-between; align-items: center; background-color: #051d3b; height: 80px; padding: 0 40px;">
+        <a href="#" class="logo-link" style="display: flex; align-items: center; gap: 15px; text-decoration: none; height: 100%;">
+            <img src="Logo.png" alt="POLHEIM SYSTEMS" class="logo-img" style="max-height: 70%; width: auto; object-fit: contain; display: block;">
+            <span class="logo-text" style="color: #ffffff !important; text-decoration: none !important; font-weight: bold; font-size: 22px; white-space: nowrap;">POLHEIM 	SYSTEMS</span>
+        </a>
+        <nav style="display: flex; gap: 25px;">
+            <a href="index.html#produkte" style="color: #ffffff; text-decoration: none; font-weight: 500;">Produkte</a>
+            <a href="index.html#ablauf" style="color: #ffffff; text-decoration: none; font-weight: 500;">Ablauf</a>
+            <a href="index.html#kontakt" style="color: #ffffff; text-decoration: none; font-weight: 500;">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- INHALT / IMPRESSUM (Graublau wie die Hauptseite) -->
+    <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; padding: 60px 20px; background-color: #2b3e51; text-	align: center;">
+        
+        <h1 style="font-size: 32px; margin-bottom: 30px; letter-spacing: 1px; color: #ffffff; font-weight: bold;">Impressum</h1>
+        
+        <div style="line-height: 2; font-size: 18px; max-width: 600px; color: #ffffff;">
+            <p style="margin: 0 0 30px 0;">
+                <strong style="color: #6ba4ff; font-size: 19px;">Firmensitz:</strong><br>
+                Polheim Systems GmbH<br>
+                Kirchzartener Strasse 8<br>
+                79117 Freiburg
+            </p>
+            
+            <p style="margin: 0 0 30px 0;">
+                <strong style="color: #6ba4ff; font-size: 19px;">Telefon:</strong><br>
+                0157 52 42 15 88
+            </p>
+            
+            <p style="margin: 0;">
+                <strong style="color: #6ba4ff; font-size: 19px;">Email:</strong><br>
+                <a href="mailto:info@polheim-systems.de" style="color: #ffffff; text-decoration: underline;">info@polheim-systems.de</a>
+            </p>
+
+        <!-- Facebook Social Media Link mit Ihrem Profil-Link -->
+        <a href="https://facebook.com/martin.polheim/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background-color: #ffffff; border-radius: 50%; text-			decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Besuchen Sie uns auf Facebook">
+            <!-- Offizielle Facebook-F SVG-Grafik -->
+            <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: #051d3b;">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 		1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER / FUSSZEILE (Dunkelblau) -->
+    <footer style="background-color: #051d3b; padding: 25px 0;">
+        <p style="color: #ffffff; opacity: 0.7; font-size: 14px; text-align: center; margin: 0;">
+            © 2026 Polheim Systems. Alle Rechte vorbehalten. | 
+            <a href="mailto:info@polheim-systems.de" style="color: #ffffff; text-decoration: none;">info@polheim-systems.de</a> | 
+            <a href="index.html" style="color: #ffffff; text-decoration: underline;">Startseite</a>
+        </p>
+    </footer>
+
+</body>
+
+
+
+</html>

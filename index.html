@@ -35,18 +35,74 @@
         .form-group label { display: block; margin-bottom: 5px; }
         .form-group input, .form-group textarea { width: 100%; padding: 10px; border: none; border-radius: 4px; }
         footer { background: #051422; color: #999; text-align: center; padding: 30px 20px; font-size: 14px; }
-    </style>
+    
+
+header {
+    display: flex;
+    justify-content: space-between; /* Schiebt Logo-Einheit nach links und Nav nach rechts */
+    align-items: center;
+    background-color: #051d3b; /* Dunkelblau aus Ihrem Design */
+    height: 80px; 
+    padding: 0 40px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Abstand zwischen dem Bild-Logo und dem Text "POLHEIM SYSTEMS" */
+    text-decoration: none; /* Entfernt den Unterstrich beim Text */
+    height: 100%;
+}
+
+.logo-img {
+    max-height: 70%; /* Passt die Bildgröße perfekt an die Zeilenhöhe an */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 22px;
+    white-space: nowrap; /* Verhindert einen ungewollten Zeilenumbruch beim Namen */
+}
+
+/* Styling für die Navigation auf der rechten Seite */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Kleiner visueller Effekt beim Drüberfahren */
+}
+
+
+</style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">POLHEIM SYSTEMS</a>
-        <nav>
-            <a href="#produkte">Produkte</a>
-            <a href="#ablauf">Ablauf</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </header>
+
+<header>
+    <!-- Logo und Text sind links als eine saubere Einheit verbunden -->
+    <a href="#" class="logo-link">
+        <img src="Logo.png" alt="POLHEIM SYSTEMS" class="logo-img">
+        <span class="logo-text">POLHEIM SYSTEMS</span>
+    </a>
+    
+    <nav>
+        <a href="#produkte">Produkte</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
 
     <section class="hero">
         <h1>Ihr Nutzfahrzeug, perfekt eingerichtet.</h1>
@@ -54,32 +110,56 @@
         <a href="#kontakt" class="btn">Jetzt Beratung anfragen</a>
     </section>
 
-    <section class="container" id="produkte">
-        <h2 class="section-title">Unsere Produktbereiche</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Fahrzeugeinrichtungen</h3>
-                <p>Maßgeschneiderte Regale, Schubladen und Koffersysteme aus leichtem Aluminium für jedes Gewerk.</p>
+   <section id="produkte" style="padding: 60px 20px; font-family: sans-serif; background-color: #ffffff; text-align: center;">
+    
+    	<h2 style="font-size: 28px; color: #051d3b; margin-bottom: 40px; font-weight: bold;">Unsere Produktbereiche</h2>
+    
+   	 <!-- Flex-Container für das Karten-Raster -->
+    	<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1200px; margin: 0 auto;">
+        
+        <!-- KATEGORIE 1: Fahrzeugeinrichtungen -->
+        <div style="flex: 1; min-width: 280px; max-width: 350px; background: #f8f9fa; border-radius: 8px; border-top: 4px solid #051d3b; box-shadow: 0 4px 			10pxrgba(0,0,0,0.05); overflow: hidden; text-align: left;">
+            <img src="Screenshot 2026-08-24 173827.png" alt="Fahrzeugeinrichtungen" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+            <div style="padding: 25px;">
+                <h3 style="font-size: 18px; color: #051d3b; margin: 0 0 15px 0; font-weight: bold;">Fahrzeugeinrichtungen</h3>
+                <p style="font-size: 14px; color: #4a5568; line-height: 1.6; margin: 0;">Maßgeschneiderte Regale, Schubladen und Koffersysteme aus leichtem Aluminium für 		jedes Gewerk.</p>
             </div>
-            <div class="card">
-                <h3>Dachträgersysteme</h3>
-                <p>Aerodynamisch und hochbelastbar. Perfekt abgestimmt für den sicheren Transport auf dem Fahrzeugdach:</p>
-                <ul>
+        </div>
+
+        <!-- KATEGORIE 2: Dachträgersysteme -->
+        <div style="flex: 1; min-width: 280px; max-width: 350px; background: #f8f9fa; border-radius: 8px; border-top: 4px solid #051d3b; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
+            <img src="Screenshot 2026-08-24 174057.png" alt="Dachträgersysteme" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+            <div style="padding: 25px;">
+                <h3 style="font-size: 18px; color: #051d3b; margin: 0 0 15px 0; font-weight: bold;">Dachträgersysteme</h3>
+                <p style="font-size: 14px; color: #4a5568; line-height: 1.6; margin: 0 0 10px 0;">Aerodynamisch und hochbelastbar. Perfekt abgestimmt für den sicheren Transport auf dem Fahrzeugdach:</p>
+                <ul style="font-size: 14px; color: #4a5568; line-height: 1.6; margin: 0; padding-left: 15px;">
                     <li>Dachträger Q01 (Basis)</li>
                     <li>Klappbar Dachträger Q07</li>
                     <li>Dachgalerie Q13 & Q19</li>
                 </ul>
             </div>
-            <div class="card">
-                <h3>Boden & Verkleidung</h3>
-                <p>Passgenaue, strapazierfähige Bodenplatten und kratzfeste Seitenwandverkleidungen schützen Ihren Laderaum dauerhaft.</p>
-            </div>
-            <div class="card">
-                <h3>Ladungssicherung</h3>
-                <p>Profi-Zubehör nach gesetzlicher Norm: Zurrschienen, Klemmstangen, Fittinge, Gurte und Netze.</p>
+        </div>
+
+        <!-- KATEGORIE 3: Boden & Verkleidung -->
+        <div style="flex: 1; min-width: 280px; max-width: 350px; background: #f8f9fa; border-radius: 8px; border-top: 4px solid #051d3b; box-shadow: 0 4px 10px 		rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
+            <img src="Screenshot 2026-08-24 174649.png" alt="Boden & Verkleidung" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+            <div style="padding: 25px;">
+                <h3 style="font-size: 18px; color: #051d3b; margin: 0 0 15px 0; font-weight: bold;">Boden & Verkleidung</h3>
+                <p style="font-size: 14px; color: #4a5568; line-height: 1.6; margin: 0;">Passgenaue, strapazierfähige Bodenplatten und kratzfeste Seitenwandverkleidungen schützen Ihren Laderaum dauerhaft.</p>
             </div>
         </div>
-    </section>
+
+        <!-- KATEGORIE 4: Ladungssicherung -->
+        <div style="flex: 1; min-width: 280px; max-width: 350px; background: #f8f9fa; border-radius: 8px; border-top: 4px solid #051d3b; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
+            <img src="Screenshot 2026-08-24 174829.png" alt="Ladungssicherung" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+            <div style="padding: 25px;">
+                <h3 style="font-size: 18px; color: #051d3b; margin: 0 0 15px 0; font-weight: bold;">Ladungssicherung</h3>
+                <p style="font-size: 14px; color: #4a5568; line-height: 1.6; margin: 0;">Profi-Zubehör nach gesetzlicher Norm: Zurrschienen, Klemmstangen, Fittinge, Gurte und Netze.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <section id="kontakt" class="container">
     <h2 class="section-title">Anfrage senden</h2>
@@ -125,7 +205,12 @@
 
 
     <footer>
-        <p>&copy; 2026 Polheim Systems. Alle Rechte vorbehalten. | info@polheim-systems.de</p>
+    	<p style="color: #ffffff; opacity: 0.7; font-size: 14px; text-align: center; margin: 0; padding: 20px 0;">
+        © 2026 Polheim Systems. Alle Rechte vorbehalten. | 
+        <a href="mailto:info@polheim-systems.de" style="color: #ffffff; text-decoration: none;">info@polheim-systems.de</a> | 
+        <!-- Neuer Link zum Impressum -->
+        <a href="impressum.html" style="color: #ffffff; text-decoration: underline; font-weight: 500;">Impressum</a>
+        </p>
     </footer>
 
 </body>
